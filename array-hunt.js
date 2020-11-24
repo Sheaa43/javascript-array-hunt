@@ -114,7 +114,16 @@ $(document).ready(function () {
         Find all of the strings with less than 6 characters.
         Output them to td#lessThanSix
          */
+        var lessThanSix = "";
+        for (var i = 0; i < myArray.length; i++)
+        {
 
+            if(myArray[i].length < 6)
+            {
+                lessThanSix += myArray[i] + " ";
+            }
+        }
+        $("td#lessThanSix").text(lessThanSix);
 
         /*
         Find the longest string in the array.
@@ -138,8 +147,13 @@ $(document).ready(function () {
         Output all of the strings in reverse order and separated by
         ' - ' to td#reverseDash
          */
+        //myArray.reverse();
+        //$("td#reverseDash").text(myArray.join("-"));
+        //myArray.reverse();
+        //$("td#reverseDash").text(myArray.join("-"));
 
-;
+        $("td#reverseDash").text(myArray.reverse().join("-"));
+
     }
 
 });
